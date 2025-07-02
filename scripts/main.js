@@ -36,17 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add scroll effect to navbar
-    window.addEventListener('scroll', function() {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 50) {
-            navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-            navbar.style.backdropFilter = 'blur(10px)';
-        } else {
-            navbar.style.background = '#fff';
-            navbar.style.backdropFilter = 'none';
-        }
-    });
+    // Navbar scroll effect removed - keeping consistent gold background
 
     // Form validation for quote and contact forms
     const forms = document.querySelectorAll('form');
