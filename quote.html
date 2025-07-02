@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Request a Quote - Drywall Pro Services</title>
+    <meta name="description" content="Get a free quote for your drywall project from Calgary's trusted professionals. Fast, accurate estimates for all drywall services.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Drywall Pro Services</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link">Gallery</a>
+                <a href="safety.html" class="nav-link">Safety & Warranty</a>
+                <a href="subcontractors.html" class="nav-link">Subcontractors</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="quote.html" class="nav-link quote-btn active">Request A Quote</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Request a Free Quote</h1>
+            <p>Get an accurate estimate for your drywall project today</p>
+        </div>
+    </section>
+
+    <!-- Quote Form Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-intro">
+                <h2>Get Your Free Estimate</h2>
+                <p>Fill out the form below with details about your project, and we'll provide you with a detailed, no-obligation quote within 24 hours. The more information you provide, the more accurate your estimate will be.</p>
+            </div>
+
+            <form class="quote-form" id="quoteForm">
+                <!-- Personal Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-user"></i> Contact Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="address">Project Address</label>
+                        <input type="text" id="address" name="address" placeholder="Street address, City, Postal Code">
+                    </div>
+                </div>
+
+                <!-- Project Details -->
+                <div class="form-section">
+                    <h3><i class="fas fa-hammer"></i> Project Details</h3>
+                    
+                    <div class="form-group">
+                        <label for="projectType">Project Type *</label>
+                        <select id="projectType" name="projectType" required>
+                            <option value="">Select project type</option>
+                            <option value="new-construction">New Construction</option>
+                            <option value="renovation">Renovation/Remodel</option>
+                            <option value="repair">Repair Work</option>
+                            <option value="basement-finishing">Basement Finishing</option>
+                            <option value="addition">Home Addition</option>
+                            <option value="commercial">Commercial Project</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Services Needed * (Check all that apply)</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="insulation">
+                                <span class="checkmark"></span>
+                                Insulation
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="drywall-installation">
+                                <span class="checkmark"></span>
+                                Drywall Installation
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="taping">
+                                <span class="checkmark"></span>
+                                Taping & Mudding
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="texturing">
+                                <span class="checkmark"></span>
+                                Texturing
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="services" value="painting">
+                                <span class="checkmark"></span>
+                                Finish Painting
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="squareFootage">Approximate Square Footage</label>
+                            <select id="squareFootage" name="squareFootage">
+                                <option value="">Select range</option>
+                                <option value="under-500">Under 500 sq ft</option>
+                                <option value="500-1000">500 - 1,000 sq ft</option>
+                                <option value="1000-2000">1,000 - 2,000 sq ft</option>
+                                <option value="2000-3000">2,000 - 3,000 sq ft</option>
+                                <option value="over-3000">Over 3,000 sq ft</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="timeline">Desired Timeline</label>
+                            <select id="timeline" name="timeline">
+                                <option value="">Select timeline</option>
+                                <option value="asap">As soon as possible</option>
+                                <option value="1-2-weeks">1-2 weeks</option>
+                                <option value="1-month">Within 1 month</option>
+                                <option value="2-3-months">2-3 months</option>
+                                <option value="flexible">Flexible</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="budget">Estimated Budget Range</label>
+                        <select id="budget" name="budget">
+                            <option value="">Select budget range</option>
+                            <option value="under-2000">Under $2,000</option>
+                            <option value="2000-5000">$2,000 - $5,000</option>
+                            <option value="5000-10000">$5,000 - $10,000</option>
+                            <option value="10000-20000">$10,000 - $20,000</option>
+                            <option value="over-20000">Over $20,000</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="description">Project Description *</label>
+                        <textarea id="description" name="description" rows="6" placeholder="Please provide detailed information about your project, including rooms involved, specific requirements, and any special considerations..." required></textarea>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="form-section">
+                    <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
+                    
+                    <div class="form-group">
+                        <label for="hearAbout">How did you hear about us?</label>
+                        <select id="hearAbout" name="hearAbout">
+                            <option value="">Select option</option>
+                            <option value="google">Google Search</option>
+                            <option value="referral">Referral from friend/family</option>
+                            <option value="contractor">Contractor recommendation</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="previous-customer">Previous customer</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="additionalNotes">Additional Notes or Questions</label>
+                        <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any additional information, special requests, or questions you'd like us to know about..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="siteVisit" name="siteVisit">
+                            <span class="checkmark"></span>
+                            I would like to schedule an on-site consultation for a more accurate estimate
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i>
+                        Submit Quote Request
+                    </button>
+                    <p class="form-note">
+                        <i class="fas fa-shield-alt"></i>
+                        Your information is secure and will only be used to provide your quote.
+                    </p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Why Choose Us for Quotes -->
+    <section class="quote-benefits">
+        <div class="container">
+            <h2>Why Request a Quote from Drywall Pro Services?</h2>
+            <div class="benefits-grid">
+                <div class="benefit">
+                    <i class="fas fa-clock"></i>
+                    <h4>Fast Response</h4>
+                    <p>Receive your detailed quote within 24 hours of submission</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-calculator"></i>
+                    <h4>Accurate Estimates</h4>
+                    <p>Detailed breakdowns with transparent pricing and no hidden fees</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-handshake"></i>
+                    <h4>No Obligation</h4>
+                    <p>Free quotes with no pressure - take your time to decide</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-award"></i>
+                    <h4>Professional Service</h4>
+                    <p>Over 14 years of experience in Calgary drywall services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Drywall Pro Services</h3>
+                    <p>Professional drywall solutions for Calgary and surrounding areas since 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Insulation</a></li>
+                        <li><a href="services.html">Drywall Installation</a></li>
+                        <li><a href="services.html">Taping</a></li>
+                        <li><a href="services.html">Texturing</a></li>
+                        <li><a href="services.html">Finish Painting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (403) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> info@drywallproservices.ca</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Calgary, AB</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Drywall Pro Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>

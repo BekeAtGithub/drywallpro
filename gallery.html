@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Drywall Pro Services</title>
+    <meta name="description" content="View our portfolio of completed drywall projects in Calgary. See the quality and craftsmanship of Drywall Pro Services.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Drywall Pro Services</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="gallery.html" class="nav-link active">Gallery</a>
+                <a href="safety.html" class="nav-link">Safety & Warranty</a>
+                <a href="subcontractors.html" class="nav-link">Subcontractors</a>
+                <a href="contact.html" class="nav-link">Contact Us</a>
+                <a href="quote.html" class="nav-link quote-btn">Request A Quote</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Our Work Gallery</h1>
+            <p>See the quality and craftsmanship that sets us apart</p>
+        </div>
+    </section>
+
+    <!-- Gallery Filter -->
+    <section class="gallery-filter">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="residential">Residential</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="basement">Basement Finishing</button>
+                <button class="filter-btn" data-filter="renovation">Renovations</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-section">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Residential Projects -->
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="images/gallery/residential-1.jpg" alt="Modern living room drywall installation">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Modern Living Room</h4>
+                                <p>Complete drywall installation with smooth finish</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="images/gallery/residential-2.jpg" alt="Master bedroom drywall and painting">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Master Bedroom Suite</h4>
+                                <p>Drywall installation, taping, and finish painting</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="images/gallery/residential-3.jpg" alt="Kitchen renovation drywall work">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Kitchen Renovation</h4>
+                                <p>Custom drywall work for modern kitchen design</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Commercial Projects -->
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-image">
+                        <img src="images/gallery/commercial-1.jpg" alt="Office space drywall installation">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Corporate Office</h4>
+                                <p>Large-scale commercial drywall installation</p>
+                                <span class="gallery-category">Commercial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-image">
+                        <img src="images/gallery/commercial-2.jpg" alt="Retail space drywall finishing">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Retail Space</h4>
+                                <p>Professional drywall finishing for retail environment</p>
+                                <span class="gallery-category">Commercial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Basement Finishing -->
+                <div class="gallery-item" data-category="basement">
+                    <div class="gallery-image">
+                        <img src="images/gallery/basement-1.jpg" alt="Finished basement family room">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Basement Family Room</h4>
+                                <p>Complete basement finishing with insulation and drywall</p>
+                                <span class="gallery-category">Basement Finishing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="basement">
+                    <div class="gallery-image">
+                        <img src="images/gallery/basement-2.jpg" alt="Basement home theater">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Home Theater</h4>
+                                <p>Specialized drywall work for entertainment space</p>
+                                <span class="gallery-category">Basement Finishing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Renovation Projects -->
+                <div class="gallery-item" data-category="renovation">
+                    <div class="gallery-image">
+                        <img src="images/gallery/renovation-1.jpg" alt="Bathroom renovation drywall">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Bathroom Renovation</h4>
+                                <p>Moisture-resistant drywall installation</p>
+                                <span class="gallery-category">Renovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="renovation">
+                    <div class="gallery-image">
+                        <img src="images/gallery/renovation-2.jpg" alt="Home addition drywall work">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Home Addition</h4>
+                                <p>Seamless integration with existing structure</p>
+                                <span class="gallery-category">Renovation</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Projects -->
+                <div class="gallery-item" data-category="residential">
+                    <div class="gallery-image">
+                        <img src="images/gallery/texture-1.jpg" alt="Custom texture application">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Custom Texturing</h4>
+                                <p>Artistic texture application for unique finish</p>
+                                <span class="gallery-category">Residential</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="commercial">
+                    <div class="gallery-image">
+                        <img src="images/gallery/smooth-finish.jpg" alt="Smooth drywall finish">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Smooth Finish Work</h4>
+                                <p>Perfect smooth finish ready for painting</p>
+                                <span class="gallery-category">Commercial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="basement">
+                    <div class="gallery-image">
+                        <img src="images/gallery/basement-office.jpg" alt="Basement home office">
+                        <div class="gallery-overlay">
+                            <div class="gallery-info">
+                                <h4>Basement Office</h4>
+                                <p>Professional workspace in finished basement</p>
+                                <span class="gallery-category">Basement Finishing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="gallery-testimonials">
+        <div class="container">
+            <h2>What Our Clients Say</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Exceptional work on our basement finishing project. The attention to detail and quality of workmanship exceeded our expectations."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Sarah & Mike Johnson</strong>
+                        <span>Calgary, AB</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Professional, reliable, and honest. Drywall Pro Services delivered exactly what they promised on time and within budget."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>David Chen</strong>
+                        <span>Airdrie, AB</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The team was courteous, clean, and efficient. Our home renovation looks amazing thanks to their expertise."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Jennifer Martinez</strong>
+                        <span>Cochrane, AB</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta">
+        <div class="container">
+            <h2>Ready to Start Your Project?</h2>
+            <p>Let us bring the same quality and craftsmanship to your home or business</p>
+            <a href="quote.html" class="btn btn-primary">Get Your Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Drywall Pro Services</h3>
+                    <p>Professional drywall solutions for Calgary and surrounding areas since 2010.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="services.html">Insulation</a></li>
+                        <li><a href="services.html">Drywall Installation</a></li>
+                        <li><a href="services.html">Taping</a></li>
+                        <li><a href="services.html">Texturing</a></li>
+                        <li><a href="services.html">Finish Painting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><i class="fas fa-phone"></i> (403) 555-0123</p>
+                    <p><i class="fas fa-envelope"></i> info@drywallproservices.ca</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Calgary, AB</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Drywall Pro Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/gallery.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <!-- Gold circle -->
+  <circle cx="50" cy="50" r="30" fill="none" stroke="#D4AF37" stroke-width="3"/>
+
+  <!-- Maple leaf -->
+  <path d="M50 30 L53 37 L60 35 L57 42 L64 45 L57 48 L60 55 L53 53 L50 60 L47 53 L40 55 L43 48 L36 45 L43 42 L40 35 L47 37 Z" fill="#D4AF37"/>
+
+  <!-- Text -->
+  <text x="90" y="40" font-family="serif" font-size="18" font-weight="bold" fill="#D4AF37" letter-spacing="1px">DRYWALL</text>
+  <text x="90" y="60" font-family="serif" font-size="18" font-weight="bold" fill="#D4AF37" letter-spacing="1px">PRO</text>
+</svg>
