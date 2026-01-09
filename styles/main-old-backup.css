@@ -686,12 +686,14 @@ body {
 /* Services Detailed */
 .services-detailed {
     padding: 80px 0;
-    background: #f8f9fa;
 }
 
 .service-detail {
     margin-bottom: 80px;
     padding: 60px 0;
+}
+
+.service-detail:nth-child(even) {
     background: #f8f9fa;
 }
 
@@ -974,7 +976,7 @@ body {
 }
 
 .area-card {
-    background: #f8f9fa;
+    background: white;
     padding: 30px 20px;
     border-radius: 10px;
     text-align: center;
@@ -1000,7 +1002,7 @@ body {
 /* Quote Page Styles */
 .quote-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .quote-intro {
@@ -1317,7 +1319,7 @@ body {
     position: relative;
     max-width: 90%;
     max-height: 90%;
-    background: #f8f9fa;
+    background: white;
     border-radius: 10px;
     overflow: hidden;
 }
@@ -1413,7 +1415,7 @@ body {
 /* Safety & Warranty Page Styles */
 .safety-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .safety-section h2 {
@@ -1479,7 +1481,7 @@ body {
 }
 
 .protocol-card {
-    background: #f8f9fa;
+    background: white;
     padding: 40px 30px;
     border-radius: 10px;
     text-align: center;
@@ -1527,7 +1529,7 @@ body {
 
 .warranty-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .warranty-section h2 {
@@ -1593,7 +1595,7 @@ body {
 }
 
 .coverage-card {
-    background: #f8f9fa;
+    background: white;
     padding: 30px 20px;
     border-radius: 10px;
     text-align: center;
@@ -1612,7 +1614,7 @@ body {
 }
 
 .warranty-note {
-    background: #f8f9fa;
+    background: white;
     padding: 40px;
     border-radius: 10px;
     border-left: 5px solid #e67e22;
@@ -1706,7 +1708,7 @@ body {
 /* Subcontractors Page Styles */
 .subcontractor-intro {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .subcontractor-intro h2 {
@@ -1767,7 +1769,7 @@ body {
 }
 
 .offer-card {
-    background: #f8f9fa;
+    background: white;
     padding: 30px;
     border-radius: 10px;
     text-align: center;
@@ -1805,7 +1807,7 @@ body {
 
 .requirements {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .requirements h2 {
@@ -1819,12 +1821,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-}
-
-.requirements-list,
-.preferred-skills {
-    padding: 30px;
-    border-radius: 10px;
 }
 
 .requirements-list h3,
@@ -1909,7 +1905,7 @@ body {
 
 .application-form-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .form-container {
@@ -1940,7 +1936,7 @@ body {
 /* Quote Page Styles */
 .quote-section {
     padding: 80px 0;
-    background: #f8f9fa;
+    background: white;
 }
 
 .quote-intro {
@@ -2277,109 +2273,6 @@ body {
     .cta p {
         font-size: 1rem;
     }
-
-    /* Mobile-specific improvements */
-    .container {
-        padding: 0 15px;
-    }
-
-    .quote-form,
-    .application-form,
-    .contact-form-container {
-        padding: 20px;
-    }
-
-    .form-section {
-        padding-bottom: 20px;
-    }
-
-    .service-detail {
-        padding: 40px 0;
-        margin-bottom: 40px;
-    }
-
-    .content-image img {
-        max-height: 300px;
-        object-fit: cover;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        text-align: center;
-    }
-
-    .values-grid,
-    .commitment-grid,
-    .areas-grid {
-        grid-template-columns: 1fr;
-    }
-
-    h1 {
-        font-size: 2rem !important;
-    }
-
-    h2 {
-        font-size: 1.8rem !important;
-    }
-
-    h3 {
-        font-size: 1.3rem !important;
-    }
-
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.95rem;
-    }
-
-    .lightbox-content {
-        max-width: 95%;
-        max-height: 95%;
-    }
-
-    .lightbox-image {
-        max-height: 60vh;
-    }
-
-    .requirements-list,
-    .preferred-skills {
-        padding: 20px;
-    }
-
-    .warranty-note,
-    .protocol-card,
-    .coverage-card,
-    .offer-card {
-        padding: 20px;
-    }
-}
-
-/* Tablet responsive design */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        padding: 0 30px;
-    }
-
-    .hero-content,
-    .content-split {
-        gap: 40px;
-    }
-
-    .services-grid,
-    .values-grid,
-    .commitment-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .stats {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .protocols-grid,
-    .offers-grid,
-    .coverage-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
 }
 
 /* Global color overrides for consistency */
@@ -2410,13 +2303,7 @@ body {
 .quote-intro h2,
 .form-container h2,
 .service-header h2,
-.service-detail h3,
-.service-areas h2,
-.safety-protocols h2,
-.warranty-coverage h2,
-.what-we-offer h2,
-.application-process h2,
-.form-section h3 {
+.service-detail h3 {
     color: var(--primary-gold) !important;
 }
 
@@ -2429,8 +2316,7 @@ body {
 .application-form-section p,
 .form-container > p,
 .quote-intro p,
-.service-detail p,
-.service-areas > .container > p {
+.service-detail p {
     color: var(--text-muted) !important;
 }
 
@@ -2449,24 +2335,14 @@ body {
 .warranty-item h4,
 .protocol-card h3,
 .offer-card h3,
-.step h3,
-.coverage-card h3,
-.area-card h3 {
-    color: var(--primary-gold) !important;
+.step h3 {
+    color: var(--text-light) !important;
 }
 
 .protocol-card,
 .offer-card,
 .area-card,
-.highlight,
-.service-detail,
-.coverage-card,
-.warranty-note,
-.quote-form,
-.application-form,
-.lightbox-content,
-.requirements-list,
-.preferred-skills {
+.highlight {
     background: var(--dark-tertiary) !important;
     border: 1px solid var(--dark-tertiary) !important;
 }
@@ -2481,17 +2357,14 @@ body {
 .warranty-coverage,
 .what-we-offer,
 .application-process,
-.service-areas,
-.requirements-content {
+.service-areas {
     background: var(--dark-secondary) !important;
 }
 
 .protocol-card li,
 .warranty-note li,
 .area-card p,
-.step p,
-.coverage-card p,
-.offer-card p {
+.step p {
     color: var(--text-muted) !important;
 }
 
@@ -2518,6 +2391,10 @@ body {
 }
 
 .highlight span {
+    color: var(--text-light) !important;
+}
+
+.area-card h3 {
     color: var(--text-light) !important;
 }
 
