@@ -102,32 +102,37 @@
                 <!-- Contact Form -->
                 <div class="contact-form-container">
                     <h2>Send Us a Message</h2>
+                    <div data-fs-success class="fs-success-msg">Thank you! Your message has been sent. We'll be in touch soon.</div>
+                    <div data-fs-error class="fs-form-error"></div>
                     <form class="contact-form" id="contactForm" action="https://formspree.io/f/xlgwkvyo" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
+                                <input type="text" id="firstName" name="firstName" required data-fs-field>
+                                <span data-fs-error="firstName" class="fs-field-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
+                                <input type="text" id="lastName" name="lastName" required data-fs-field>
+                                <span data-fs-error="lastName" class="fs-field-error"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required data-fs-field>
+                                <span data-fs-error="email" class="fs-field-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number</label>
-                                <input type="tel" id="phone" name="phone">
+                                <input type="tel" id="phone" name="phone" data-fs-field>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="subject">Subject *</label>
-                            <select id="subject" name="subject" required>
+                            <select id="subject" name="subject" required data-fs-field>
                                 <option value="">Select a subject</option>
                                 <option value="quote">Request a Quote</option>
                                 <option value="consultation">Free Consultation</option>
@@ -135,11 +140,12 @@
                                 <option value="emergency">Emergency Repair</option>
                                 <option value="other">Other</option>
                             </select>
+                            <span data-fs-error="subject" class="fs-field-error"></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="projectType">Project Type</label>
-                            <select id="projectType" name="projectType">
+                            <select id="projectType" name="projectType" data-fs-field>
                                 <option value="">Select project type</option>
                                 <option value="insulation">Insulation</option>
                                 <option value="drywall">Drywall Installation</option>
@@ -150,21 +156,22 @@
                                 <option value="repair">Repair Work</option>
                             </select>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" placeholder="Please describe your project or question in detail..." required></textarea>
+                            <textarea id="message" name="message" rows="6" placeholder="Please describe your project or question in detail..." required data-fs-field></textarea>
+                            <span data-fs-error="message" class="fs-field-error"></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="checkbox-label">
-                                <input type="checkbox" id="newsletter" name="newsletter">
+                                <input type="checkbox" id="newsletter" name="newsletter" data-fs-field>
                                 <span class="checkmark"></span>
                                 I would like to receive updates about services and promotions
                             </label>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+
+                        <button type="submit" class="btn btn-primary" data-fs-submit-btn>Send Message</button>
                     </form>
                 </div>
             </div>
@@ -267,5 +274,10 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#contactForm', formId: 'xlgwkvyo' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

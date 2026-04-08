@@ -51,6 +51,8 @@
                 <p>Fill out the form below with details about your project, and we'll provide you with a detailed, no-obligation quote within 24 hours. The more information you provide, the more accurate your estimate will be.</p>
             </div>
 
+            <div data-fs-success class="fs-success-msg">Thank you! Your quote request has been sent. We'll get back to you within 24 hours.</div>
+            <div data-fs-error class="fs-form-error"></div>
             <form class="quote-form" id="quoteForm" action="https://formspree.io/f/xlgwkvyo" method="POST">
                 <!-- Personal Information -->
                 <div class="form-section">
@@ -58,38 +60,42 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="firstName">First Name *</label>
-                            <input type="text" id="firstName" name="firstName" required>
+                            <input type="text" id="firstName" name="firstName" required data-fs-field>
+                            <span data-fs-error="firstName" class="fs-field-error"></span>
                         </div>
                         <div class="form-group">
                             <label for="lastName">Last Name *</label>
-                            <input type="text" id="lastName" name="lastName" required>
+                            <input type="text" id="lastName" name="lastName" required data-fs-field>
+                            <span data-fs-error="lastName" class="fs-field-error"></span>
                         </div>
                     </div>
-                    
+
                     <div class="form-row">
                         <div class="form-group">
                             <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" required data-fs-field>
+                            <span data-fs-error="email" class="fs-field-error"></span>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number *</label>
-                            <input type="tel" id="phone" name="phone" required>
+                            <input type="tel" id="phone" name="phone" required data-fs-field>
+                            <span data-fs-error="phone" class="fs-field-error"></span>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="address">Project Address</label>
-                        <input type="text" id="address" name="address" placeholder="Street address, City, Postal Code">
+                        <input type="text" id="address" name="address" placeholder="Street address, City, Postal Code" data-fs-field>
                     </div>
                 </div>
 
                 <!-- Project Details -->
                 <div class="form-section">
                     <h3><i class="fas fa-hammer"></i> Project Details</h3>
-                    
+
                     <div class="form-group">
                         <label for="projectType">Project Type *</label>
-                        <select id="projectType" name="projectType" required>
+                        <select id="projectType" name="projectType" required data-fs-field>
                             <option value="">Select project type</option>
                             <option value="new-construction">New Construction</option>
                             <option value="renovation">Renovation/Remodel</option>
@@ -98,6 +104,7 @@
                             <option value="addition">Home Addition</option>
                             <option value="commercial">Commercial Project</option>
                         </select>
+                        <span data-fs-error="projectType" class="fs-field-error"></span>
                     </div>
                     
                     <div class="form-group">
@@ -170,17 +177,18 @@
                     
                     <div class="form-group">
                         <label for="description">Project Description *</label>
-                        <textarea id="description" name="description" rows="6" placeholder="Please provide detailed information about your project, including rooms involved, specific requirements, and any special considerations..." required></textarea>
+                        <textarea id="description" name="description" rows="6" placeholder="Please provide detailed information about your project, including rooms involved, specific requirements, and any special considerations..." required data-fs-field></textarea>
+                        <span data-fs-error="description" class="fs-field-error"></span>
                     </div>
                 </div>
 
                 <!-- Additional Information -->
                 <div class="form-section">
                     <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
-                    
+
                     <div class="form-group">
                         <label for="hearAbout">How did you hear about us?</label>
-                        <select id="hearAbout" name="hearAbout">
+                        <select id="hearAbout" name="hearAbout" data-fs-field>
                             <option value="">Select option</option>
                             <option value="google">Google Search</option>
                             <option value="referral">Referral from friend/family</option>
@@ -190,15 +198,15 @@
                             <option value="other">Other</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="additionalNotes">Additional Notes or Questions</label>
-                        <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any additional information, special requests, or questions you'd like us to know about..."></textarea>
+                        <textarea id="additionalNotes" name="additionalNotes" rows="4" placeholder="Any additional information, special requests, or questions you'd like us to know about..." data-fs-field></textarea>
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="checkbox-label">
-                            <input type="checkbox" id="siteVisit" name="siteVisit">
+                            <input type="checkbox" id="siteVisit" name="siteVisit" data-fs-field>
                             <span class="checkmark"></span>
                             I would like to schedule an on-site consultation for a more accurate estimate
                         </label>
@@ -206,7 +214,7 @@
                 </div>
 
                 <div class="form-actions">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary" data-fs-submit-btn>
                         <i class="fas fa-paper-plane"></i>
                         Submit Quote Request
                     </button>
@@ -280,5 +288,10 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#quoteForm', formId: 'xlgwkvyo' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>

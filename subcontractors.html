@@ -216,34 +216,40 @@
                 <h2>Subcontractor Application</h2>
                 <p>Interested in joining our team? Fill out the form below and we'll get back to you soon.</p>
                 
+                <div data-fs-success class="fs-success-msg">Thank you for applying! We'll review your application and get back to you soon.</div>
+                <div data-fs-error class="fs-form-error"></div>
                 <form class="application-form" id="applicationForm" action="https://formspree.io/f/xlgwkvyo" method="POST">
                     <div class="form-section">
                         <h3>Personal Information</h3>
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="firstName">First Name *</label>
-                                <input type="text" id="firstName" name="firstName" required>
+                                <input type="text" id="firstName" name="firstName" required data-fs-field>
+                                <span data-fs-error="firstName" class="fs-field-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="lastName">Last Name *</label>
-                                <input type="text" id="lastName" name="lastName" required>
+                                <input type="text" id="lastName" name="lastName" required data-fs-field>
+                                <span data-fs-error="lastName" class="fs-field-error"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="email">Email Address *</label>
-                                <input type="email" id="email" name="email" required>
+                                <input type="email" id="email" name="email" required data-fs-field>
+                                <span data-fs-error="email" class="fs-field-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number *</label>
-                                <input type="tel" id="phone" name="phone" required>
+                                <input type="tel" id="phone" name="phone" required data-fs-field>
+                                <span data-fs-error="phone" class="fs-field-error"></span>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="address">Address</label>
-                            <input type="text" id="address" name="address" placeholder="Street address, City, Postal Code">
+                            <input type="text" id="address" name="address" placeholder="Street address, City, Postal Code" data-fs-field>
                         </div>
                     </div>
 
@@ -253,23 +259,25 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="experience">Years of Drywall Experience *</label>
-                                <select id="experience" name="experience" required>
+                                <select id="experience" name="experience" required data-fs-field>
                                     <option value="">Select experience level</option>
                                     <option value="3-5">3-5 years</option>
                                     <option value="5-10">5-10 years</option>
                                     <option value="10-15">10-15 years</option>
                                     <option value="15+">15+ years</option>
                                 </select>
+                                <span data-fs-error="experience" class="fs-field-error"></span>
                             </div>
                             <div class="form-group">
                                 <label for="availability">Availability *</label>
-                                <select id="availability" name="availability" required>
+                                <select id="availability" name="availability" required data-fs-field>
                                     <option value="">Select availability</option>
                                     <option value="full-time">Full-time</option>
                                     <option value="part-time">Part-time</option>
                                     <option value="project-based">Project-based</option>
                                     <option value="seasonal">Seasonal</option>
                                 </select>
+                                <span data-fs-error="availability" class="fs-field-error"></span>
                             </div>
                         </div>
                         
@@ -306,22 +314,24 @@
                         
                         <div class="form-group">
                             <label for="insurance">Do you have liability insurance? *</label>
-                            <select id="insurance" name="insurance" required>
+                            <select id="insurance" name="insurance" required data-fs-field>
                                 <option value="">Select option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                                 <option value="can-obtain">Can obtain if needed</option>
                             </select>
+                            <span data-fs-error="insurance" class="fs-field-error"></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="wcb">Do you have WCB coverage? *</label>
-                            <select id="wcb" name="wcb" required>
+                            <select id="wcb" name="wcb" required data-fs-field>
                                 <option value="">Select option</option>
                                 <option value="yes">Yes</option>
                                 <option value="no">No</option>
                                 <option value="can-obtain">Can obtain if needed</option>
                             </select>
+                            <span data-fs-error="wcb" class="fs-field-error"></span>
                         </div>
                     </div>
 
@@ -330,22 +340,23 @@
                         
                         <div class="form-group">
                             <label for="experience-details">Describe your drywall experience *</label>
-                            <textarea id="experience-details" name="experience-details" rows="4" placeholder="Tell us about your experience, types of projects you've worked on, and your areas of expertise..." required></textarea>
+                            <textarea id="experience-details" name="experience-details" rows="4" placeholder="Tell us about your experience, types of projects you've worked on, and your areas of expertise..." required data-fs-field></textarea>
+                            <span data-fs-error="experience-details" class="fs-field-error"></span>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="references">References</label>
-                            <textarea id="references" name="references" rows="3" placeholder="Please provide contact information for 2-3 professional references..."></textarea>
+                            <textarea id="references" name="references" rows="3" placeholder="Please provide contact information for 2-3 professional references..." data-fs-field></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label for="additional-info">Additional Information</label>
-                            <textarea id="additional-info" name="additional-info" rows="3" placeholder="Any additional information you'd like us to know..."></textarea>
+                            <textarea id="additional-info" name="additional-info" rows="3" placeholder="Any additional information you'd like us to know..." data-fs-field></textarea>
                         </div>
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-primary" data-fs-submit-btn>
                             <i class="fas fa-paper-plane"></i>
                             Submit Application
                         </button>
@@ -387,5 +398,10 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script>
+        window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+        formspree('initForm', { formElement: '#applicationForm', formId: 'xlgwkvyo' });
+    </script>
+    <script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
