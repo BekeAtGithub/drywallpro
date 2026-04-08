@@ -51,21 +51,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Navbar scroll effect removed - keeping consistent gold background
 
-    // Form validation for quote and contact forms
+    // Form validation and Formspree submission for quote and contact forms
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
-            
+
             // Basic form validation
             const requiredFields = form.querySelectorAll('[required]');
             let isValid = true;
-            
+
             requiredFields.forEach(field => {
                 if (!field.value.trim()) {
                     isValid = false;
                     field.style.borderColor = '#e74c3c';
-                    
+
                     // Remove error styling after user starts typing
                     field.addEventListener('input', function() {
                         this.style.borderColor = '#ddd';
@@ -74,14 +74,46 @@ document.addEventListener('DOMContentLoaded', function() {
                     field.style.borderColor = '#ddd';
                 }
             });
-            
-            if (isValid) {
-                // Show success message (you can replace this with actual form submission)
-                showMessage('Thank you! We will contact you soon.', 'success');
-                form.reset();
-            } else {
+
+            if (!isValid) {
                 showMessage('Please fill in all required fields.', 'error');
+                return;
             }
+
+            // Submit to Formspree
+            const submitBtn = form.querySelector('[type="submit"]');
+            const originalText = submitBtn ? submitBtn.textContent : null;
+            if (submitBtn) {
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+            }
+
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    showMessage('Thank you! Your message has been sent. We will contact you soon.', 'success');
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        const errorMsg = (data.errors && data.errors.map(err => err.message).join(', ')) ||
+                            'There was a problem sending your message. Please try again or email us directly at canadadrywallpro@gmail.com';
+                        showMessage(errorMsg, 'error');
+                    });
+                }
+            })
+            .catch(() => {
+                showMessage('There was a problem sending your message. Please try again or email us directly at canadadrywallpro@gmail.com', 'error');
+            })
+            .finally(() => {
+                if (submitBtn) {
+                    submitBtn.textContent = originalText;
+                    submitBtn.disabled = false;
+                }
+            });
         });
     });
 
